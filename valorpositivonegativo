@@ -1,0 +1,21 @@
+// valorpositivonegativo.cpp : Defines the entry point for the console application.
+// Autor:Ericka Gutierrez
+
+#include "stdafx.h"
+#include<iostream>
+#include"conio.h"
+using namespace std;
+
+
+int main() {
+	float a;
+	cout << "Ingrese un numero: " << endl;
+	cin >> a;
+	if (a>0) {
+		cout << "es positivo" << endl;
+	} else {
+		cout << "es negativo" << endl;
+	}
+	getch();
+	return 0;
+}
