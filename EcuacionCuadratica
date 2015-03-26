@@ -1,0 +1,52 @@
+// ecuacionCuadratica.cpp : Defines the entry point for the console application.
+// Autor: Ericka Gutierrez
+
+
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+
+#define SIN_TIPO string
+
+
+int main() {
+	float a;
+	float b;
+	float c;
+	float d;
+	float d};
+	SIN_TIPO lista_de_variables;
+	float raiz{;
+	float raiz{d};
+	float x;
+	float x1;
+	float x2;
+	float xi;
+	float xr;
+	cout << "Introducir la A,B,C:" << endl;
+	cin >> lista_de_variables;
+	cin >> a;
+	cin >> b;
+	cin >> c;
+	d = b*b-4*a*c;
+	if ((d==0)) {
+		x = -b/2*a;
+		cout << "Solucion unica: " << x << endl;
+	} else {
+		if ((d>0)) {
+			x1 = (-b+sqrtf(d))/2*a;
+			x2 = (-b-sqrtf(d))/2*a;
+			cout << "Soluciones reales" << endl;
+			cout << "X1: " << x1 << endl;
+			cout << "X2: " << x2 << endl;
+		} else {
+			xr = -b/b*a;
+			xi = (sqrtf(-d))/2*a;
+			cout << "Soluciones imaginarias" << endl;
+			cout << "X1:" << xr << "+" << xi << "i" << endl;
+			cout << "X2:" << xr << "-" << xi << "i" << endl;
+		}
+	}
+	return 0;
+}
