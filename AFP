@@ -1,0 +1,21 @@
+// afp.cpp : Defines the entry point for the console application.
+// Autor: Ericka Gutierrez
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+using namespace std;
+
+int main ()
+{
+float sueldo;
+cout << "Ingrese su sueldo: " << endl;
+cin >> sueldo;
+
+if (sueldo >= 3600)
+sueldo = sueldo * 0.15;
+cout << "su sueldo con el descuento de la AFP es: "<< sueldo << endl;
+getch();
+return 0;
+}
