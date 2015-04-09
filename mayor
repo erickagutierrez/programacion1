@@ -1,0 +1,32 @@
+// Mayordenumeros.cpp : Defines the entry point for the console application.
+// autor: Ericka Gutierrez
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+using namespace std;
+
+
+int main ()
+{
+	int mayor,n,i,x;
+	mayor=-999;
+	cout<< "Ingrese la cantidad de numeros de su serie: ";
+	cin>> n;
+
+	for (i=1;i<=n;i++)
+	{
+		cout<< "Ingrese el numero: "<< endl;
+		cin>> x;
+		if(mayor<x)
+		{
+			mayor=x;
+		}
+	}
+
+    cout<< "El mayor de su serie es: "<< mayor << endl;
+    getch ();
+
+	return 0;
+}
