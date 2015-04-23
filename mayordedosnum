@@ -1,0 +1,32 @@
+// mayordedosnumeros.cpp : Defines the entry point for the console application.
+// autor: ericka gutierrez
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int x,n,sum,signo,i;
+
+	cout << "Ingrese el valor de x: ";
+	cin >> x;
+	cout << "Ingrese el valor de n: ";
+	cin >> n;
+
+	sum=0;
+	signo=1;
+	
+	for(i=1; i<=n; i++)
+	{
+		x = pow(x,i);
+		sum = (sum - x)*(-1);
+	}
+
+	cout << "El valor de la sumatoria es: " <<sum;
+
+	getch();
+	return 0;
+}
