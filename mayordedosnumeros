@@ -1,0 +1,41 @@
+// mayordedosnumeros.cpp : Defines the entry point for the console application.
+// autor: ericka gutierrez
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+using namespace std;
+int main ()
+{ int a,b,mayor,menor;
+
+cout <<"Ingrese el primer numero: ";
+cin>>a;
+cout <<"Ingrese el segundo numero: ";
+cin>>b;
+
+if(a>b)
+{
+	menor = b;
+    mayor = a;
+}
+else
+{ 
+	menor = a;
+    menor = b;
+
+}
+if(mayor%menor==0)
+{
+	cout <<"menor es divisible mayor";
+}
+else
+{
+	cout <<"no es divisor";
+}
+    getch ();
+	return 0;
+}
+
+
+
