@@ -1,0 +1,39 @@
+// notasupsa.cpp : Defines the entry point for the console application.
+// autor : ericka gutierrez
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+using namespace std;
+
+int main ()
+{ float p1,p2,p3,ef,np,nota;
+int i,n,id;
+char resp;
+
+do 
+{
+cout <<"ID: ";
+cin >> id;
+cout << "Introuzca la nota del primer parcial: ";
+cin >>p1;
+cout <<"Introduzca la nota del segundo parcial: ";
+cin >>p2;
+cout <<"Introduzca la nota del tercer parcial: ";
+cin >>p3;
+cout <<"Introduzca la nota practica: ";
+cin >>np;
+cout <<"Introduzca la nota del examen final: ";
+cin>>ef;
+
+nota =((((p1+p2+p3)/3)*0.4)+(np*0.2)+(ef*0.4));
+cout <<"Su nota final es: "<< nota <<endl;
+cout <<"Desea continuar (y) o (n) ";
+cin >> resp;
+}while (resp!= 'n');
+
+getch ();
+return 0;
+}
+
