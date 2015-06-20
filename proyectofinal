@@ -1,0 +1,336 @@
+// proyectofinal.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+using namespace std;
+
+void main ()
+{ system ("color 58");
+	int opcion,m,a,x,i,y,w,z,r,s,t,q,j,d;
+	int bandera=0;
+		while(bandera==0)
+		{
+			cout <<endl;
+			cout <<"******DESCUBRA SU HOROSCOPO******"<<endl<<endl;
+			cout<<"++++++++++++++++++++++++++++++++++"<<endl<<endl;
+			cout <<"1.- HOROSCOPO ALQUIMISTA"<<endl;
+			cout <<"2.- HOROSCOPO DRUIDA"<<endl;
+			cout <<"0.- Salir"<<endl;
+            cout<<"Introduzca el numero de la opcion que prefiera: "<<endl<<endl;
+			cin>>opcion;
+
+			switch (opcion){
+
+			case 1: 
+				cout<<"Eligio el horoscopo alquimico,a continuacion introduzca los datos a pedir"<<endl<<endl;
+				cout <<"Ingrese su dia de nacimiento: ";
+				cin >>d;
+				cout <<"Ingrese en numero su mes de nacimiento: ";
+				cin>>m;
+				cout <<"Ingrese su año de nacimiento: ";
+				cin>>a;
+
+				x = 0;
+				y = 0;
+				z = 0;
+
+				for(i=1;i<2;i++)
+				{
+					r = d%10;
+					d = d/10;
+					x = d+r;
+					
+				}
+				 for(i=1;i<2;i++)
+				 {   
+					s = m%10;
+					 m = m/10;
+					y = m+s;
+				 }
+					for(j=0;j<=1;j++)
+
+					{ z= 0;
+						for(i=1;i<=3-j;i++)
+					{
+						t = a%10;
+						a = a/10;
+						z = z+t;
+						
+					}
+					z = z + a;
+					a = z;
+					}
+				   
+					 w = x + y + z;
+
+				   for(i=1;i<2;i++)
+				   { 
+					 q = w%10;
+				     w = w/10;
+				     w = w + q;
+				    }
+
+				   if(w==0)
+				   { cout<<"***COBRE***"<<endl;
+				     cout<<"Afectuosos y detallistas:"<<endl;
+					 cout<<"Benéfico como el oro y el platino, este metal hace a sus nativos solidarios y les convierte en un talismán para sus allegados"<<endl;
+					 cout <<"Si es tu caso, tienes un aspecto frágil que inspira deseos de protección en los otros, aunque en realidad eres fuerte."<<endl; 
+					 cout <<"Muy leal en la amistad, pero el amor es lo que más te interesa de la vida. Eres voluptuoso, sensible y tierno.";
+					 cout<<"Las pequeñas alegrías y detalles tienen para ti mucha importancia."<<endl;
+					 cout<<"Tu sentido de la estética y gusto por la música quizá te lleven al terreno artístico,"<<endl;
+					 cout<<"pero también puedes sentirte inclinado a ser médico, diplomático o abogado."<<endl;
+					 cout<<"Tienes suerte en los juegos de azar."<<endl;
+					 cout<<"Y, una tendencia excesiva por los dulces que puede repercutir en tu salud."<<endl;
+					 cout<<"Si te rige este metal temporalmente realizarás un anhelado proyecto"<<endl;
+			       }
+					   if(w==1)
+					   {cout<<"***PLATA***"<<endl;
+					   cout<<"Seductores y volubles:"<<endl;
+					   cout<<"La naturaleza te ha regalado un físico agradable."<<endl;
+					   cout<<"Tienes el don de seducir sin esfuerzo."<<endl; 
+					   cout<<"Tu problema son tus cambios repentinos de humor, aunque te sobran admiradores y amigos que perdonan tus travesuras."<<endl;
+					   cout<<"Pareces superficial a los desconocidos, pero detestas la hipocresía y en la intimidad eres muy sensible, romántico y sensual."<<endl;
+					   cout<<"Intuitivo, inteligente y con gran imaginación, cuando tu vida no te gusta te inventas otra."<<endl;
+					   cout<<"Muy diestro en habilidades manuales, estás dotado para las artes plásticas."<<endl;
+					   cout<<"Quizá te conviertas en pintor, arquitecto, decorador peluquero o actor."<<endl;
+					   cout<<"Tu salud es buena, aunque pasas por épocas en que tu sistema nervioso se altera con facilidad."<<endl;
+					   cout<<"Este metal como vibración temporal te aportará deseos de mejorar tu aspecto físico, haciendo deporte o cuidando tu alimentación."<<endl;
+				       }
+					 
+					    if(w==2)
+					     {cout<<"***HIERRO***"<<endl;
+						 cout<<" Dinámicos y combativos:"<<endl;
+						 cout<<"Tienes una personalidad inquieta y dual."<<endl;
+						 cout<<"Alternativamente eres fascinante o insoportable, capaz de enriquecer y proteger tu entorno con tu presencia, pero también de destruirlo."<<endl; 
+						 cout<<"Excesivamente franco y poco diplomático. El amor es para ti una eterna conquista; cuanto más se te resisten más te enamoras."<<endl; 
+						 cout<<"Tenaz y duro como el hierro, te creces durante las crisis. No tienes miedo a las batallas."<<endl;
+						 cout<<"La influencia del hierro puede llevarte a ser militar, agricultor, explorador, incluso bombero. Tu salud es excelente y gozarás de una larga vida."<<endl; 
+						 cout<<"Este metal como regente temporal te otorga vitalidad y ganas de poner en marcha proyectos olvidados."<<endl;
+						 cout<<"Harás nuevas amistades, pero tendrás que controlar tus emociones."<<endl;
+					   }
+				
+					      if(w==3)
+					     {cout<<"***MERCURIO***"<<endl;
+					     cout<<"Locuaces y simpáticos:"<<endl;
+						 cout<<"Conocido en la antigüedad como cinabrio, el mercurio simbolizaba para los alquimistas lo femenino."<<endl; 
+						 cout<<"Si estás bajo su influencia eres afable y simpático. Tienes grandes dotes oratorias y causas buena impresión."<<endl; 
+						 cout<<"Pero en la amistad y el amor eres en exceso posesivo. Si te sientes incomprendido te pones a la defensiva."<<endl; 
+						 cout<<"Tu amabilidad se transforma entonces en agresividad. El problema es que no expresas tus emociones."<<endl; 
+						 cout<<"Tu facilidad para los idiomas te permite ser intérprete, traductor o profesor."<<endl; 
+						 cout<<"Te atrae también el mundo de los negocios, la comunicación y la política."<<endl; 
+						 cout<<"Tu salud se ve afectada por tus accesos de cólera Y puedes sufrir problemas hepáticos o renales, si bien tienes gran poder de autosanación."<<endl; 
+						 cout<<"Si te rige el mercurio temporalmente pasarás una época de transición tras la que saldrás regenerado."<<endl;
+					     }
+						 
+						 if(w==4)
+					      {cout<<"***ZINC***"<<endl;
+					       cout<<"Impulsivos y serviciales:"<<endl;
+						   cout<<"Si estás bajo su influencia eres alegre y sociable. Te gusta ocuparte de los demás y hacerles feliz."<<endl;
+						   cout<<"Aunque a veces te excedes y no les dejas tomar la iniciativa en sus propios asuntos."<<endl;
+						   cout<<"Muy amigo de aventuras, no sabes decir no a las proposiciones más absurdas, y te metes en increíbles complicaciones."<<endl; 
+						   cout<<"Reflexiona más antes de actuar. No eres muy fácil de influenciar,"<<endl; 
+						   cout<<"pero tu extrema susceptibilidad puede hacerte pasar de la sonrisa a las lágrimas en un minuto."<<endl; 
+						   cout<<"Tienes una inteligencia brillante pero detestas las ideas abstractas."<<endl;
+						   cout<<"Huyes de los esfuerzos excesivos y no eres ambicioso."<<endl; 
+						   cout<<"Te va el trabajo de marinero, adoras el riesgo y siempre estás dispuesto a emprender un viaje."<<endl;
+						   cout<<"Es difícil que te tomes una historia sentimental en serio.";
+						   cout<<"Tampoco pides al otro constancia. Tu salud es frágil y te fatigas con frecuencia."<<endl;
+						   cout<<"El zinc como metal del año te impulsará a realizar viajes, a cambiar de trabajo, o a enamorarte. El número de tus amigos aumentará."<<endl;
+					      }
+					
+						 if(w==5)
+					      {cout<<"***ESTAÑO***"<<endl;
+					       cout<<"Inconstantes y sociables:"<<endl;
+						   cout<<"La influencia del estaño es muy benéfica, y hace a las personas sociables y optimistas."<<endl;
+						   cout<<"Aunque no le caes bien a todo el mundo, aquellos con quienes sientes afinidad tendrán en ti un cómplice para toda la vida."<<endl; 
+						   cout<<"Eres inteligente y cultivado, y contigo es difícil aburrirse. Te encanta el lujo y gastar dinero."<<endl; 
+						   cout<<"Tienes ideas brillantes, aunque no las llevas a la práctica. Te gustaría que las soluciones te cayeran del cielo."<<endl;
+						   cout<<"Tu problema es que cambias sin cesar: de amor, de casa, de profesión. En realidad eres un sentimental que esconde sus emociones y fantasías."<<endl;
+						   cout<<"Te desempeñarás bien como diplomático, periodista, representante o abogado. Aunque puedes verte afectado por alergias, tu salud es buena."<<endl;
+						   cout<<"Con el estaño como metal temporal atravesarás periodos de decaimiento seguidos de optimismo."<<endl;
+					      }
+						 
+						if(w==6)
+					      {cout<<"***PLOMO***"<<endl;
+					      cout<<"Pesimistas y tímidos:"<<endl;
+						  cout<<"Para los alquimistas, este metal era el más vil de todos, destinado a sufrir todas las transformaciones antes de convertirse en oro."<<endl; 
+						  cout<<"Si estás bajo su influencia tendrás que poner todo de tu parte para modelar tu carácter."<<endl;
+						  cout<<"Despréndete de tu timidez, intenta exteriorizar tus sentimientos y aprende a aceptar la ayuda de los otros."<<endl;
+						  cout<<"En el amor eres muy fogoso y constante. Tienes grandes dotes de observación y mucha paciencia."<<endl;
+						  cout<<"Te encantan los crucigramas, el dibujo o la construcción de maquetas."<<endl;
+						  cout<<"Serás por ello buen ingeniero u obrero técnico, aunque no tienes ambición y en el trabajo prefieres obedecer a mandar."<<endl; 
+						  cout<<"Tu salud se ve afectada por tus estados depresivos."<<endl; 
+						  cout<<"Como regente temporal el plomo augura ansiedad y necesidad de cambiar de vida."<<endl;
+					      }
+						
+						 if(w==7)
+					      {cout<<"***PLATINO***"<<endl;
+					      cout<<"Intelectuales y apasionados:"<<endl;
+						  cout<<"Si te rige este raro metal has nacido con buena estrella."<<endl; 
+						  cout<<"Tienes talento y elegancia. Muy buen amigo y generoso, incluso con los desconocidos."<<endl; 
+						  cout<<"Te gusta, sin embargo, mantener las distancias. Y, raramente, haces confidencias."<<endl;
+						  cout<<"Sólo con tu pareja o familiares te vuelves más hablador. En el amor te entregas por completo y soportas mal las rupturas."<<endl;
+						  cout<<"Pero también te gusta pasar ratos a solas. Eres muy original y siempre hallas algo apasionante que hacer."<<endl; 
+						  cout<<"Tu imaginación y creatividad te inclinarán hacia el arte o las ciencias y las matemáticas."<<endl; 
+						  cout<<"Gozas de gran equilibrio mental y tu salud es excelente."<<endl;
+						  cout<<"Como metal temporal el platino te aportará más objetividad y calma para resolver problemas."<<endl; 
+						  cout<<"Profesionalmente se te ocurrirán valiosas ideas que mejorarán tu estatus."<<endl;
+					     }
+						 
+						 if(w==8)
+					      {cout<<"***NIQUEL***"<<endl;
+					      cout<<"Vagabundos y poetas:"<<endl;
+						  cout<<"Tu aspecto es cuidado y elegante. Posees tacto y diplomacia."<<endl; 
+						  cout<<"Detestas las complicaciones y siempre das la razón a los otros, pero en el fondo eres difícil de convencer."<<endl; 
+						  cout<<"No tienes sentido de la propiedad y eres desordenado y fantasioso. Atraviesas la vida como si fuera un juego."<<endl; 
+						  cout<<"Tu inteligencia es rápida pero no te gusta profundizar. Te encanta la naturaleza."<<endl;
+						  cout<<"Amante tierno y dulce con las palabras, aunque la vida familiar no es lo tuyo."<<endl; 
+						  cout<<"A veces tienes la inspiración de un poeta, pero tienes gran habilidad con las manos y te van más los trabajos técnicos."<<endl; 
+						  cout<<"Puedes ser cirujano, dentista, fotógrafo, ingeniero técnico o montador de joyas. Tu salud padece altos y bajos."<<endl;
+						  cout<<"Como vibración temporal el níquel te volverá atrevido y espontáneo, aunque quizá sufras alguna decepción."<<endl;
+						  }
+						 
+						 if(w==9)
+						  {cout<<"***ORO***"<<endl;
+						  cout<<"Altruistas y encantadores:"<<endl;
+						  cout<<"El metal precioso de los alquimistas. Si estás bajo su influencia, los que te rodean se beneficiarán con tu alegría y apoyo."<<endl;
+						  cout<<"Interesante y encantador, brillas con una luz especial."<<endl; 
+						  cout<<"Eres apasionado, generoso y muy fiel en el amor y en la amistad. Detestas la traición y la injusticia."<<endl; 
+						  cout<<"Pero, cuidado con tomarte demasiado en serio o intentar aparentar lo que no eres."<<endl; 
+						  cout<<"Tu excesiva ingenuidad te hace vulnerable. Tu espíritu soñador y tus dotes de organización quizá te lleven a ser guía turístico, médico, abogado o profesor."<<endl; 
+						  cout<<"También te sentirás atraído por el misticismo y lo sobrenatural."<<endl; 
+						  cout<<"Estás capacitado para asumir grandes responsabilidades."<<endl; 
+						  cout<<"Eres un líder nato al que no asusta la adversidad."<<endl; 
+						  cout<<"Durante el año en que te rija este metal te sentirás más optimista y vital. Y tu trabajo más valorado."<<endl;break;
+						  }
+                         
+   case 2:
+	   cout<<"Eligio el horoscopo druida,ingrese los datos a continuacion: "<<endl<<endl;
+       cout<<"Ingrese el dia de su fecha de nacimiento: ";
+	   cin>>d;
+	   cout<<"Ingrese el mes en numero de su fecha de nacimiento: ";
+	   cin>>m;
+	     
+	 if(((d>19)&&(m==1))||((d<=24)&&(m==12)))
+	 {cout<<"***ABEDUL***"<<endl;
+	 cout<<"Dogmático aunque admirado. Es de naturaleza seria, reflexiva y razonadora y raramente expresa sus emociones."<<endl; 
+	 cout<<"Pero cuando se enamora, proporciona seguridad afectiva y paciencia."<<endl;
+     cout<<"Porque no quiere perder su independencia, a veces opta por el celibato."<<endl; 
+     cout<<"Cuando elige arriesgarse aparecen deseos intensos y se maneja de modo instintivo e inteligente en los juegos del amor."<<endl; 
+     cout<<"Su defecto: la severidad y el carácter pesimista."<<endl;
+	 }
+	 else
+	 {if(((d>16)&&(m==2))||((d<=21)&&(m==1)))
+	  {cout<<"***SERBAL***"<<endl;
+	  cout<<"Lo que más les interesa es el amor y la amistad y debido a su excesiva sensibilidad afectiva busca equilibrio y armonía."<<endl;
+      cout<<"Programador nato, no le gustan los imprevistos y una cosa insignificante es suficiente para cambiar su humor. Tiene tendencia a la depresión."<<endl;
+      cout<<"Necesita que su sexualidad vaya acompañada del amor y exige lo mismo que da. Pero en el terreno económico,"<<endl; 
+	  cout<<"es una persona generosa. Le gustan los trabajos relacionados con la comunicación, las artes."<<endl;
+	  }
+	  else
+	  {if(((d>16)&&(m==3))||((d<=18)&&(m==2)))
+	   {cout<<"***FRESNO***"<<endl;
+	    cout<<"Es una persona muy curiosa, sensible, receptiva e impresionable aunque a la vez, reservada y complicada."<<endl;
+        cout<<"En cuanto al amor, se entrega al máximo aunque su espíritu de libertad hace que no"<<endl; 
+        cout<<"se ate por mucho a una relación pero en cada pareja busca afecto y comprensión."<<endl;
+        cout<<"Su defecto es ser hipersensibles, sumamente influenciables y poco prácticos."<<endl;
+	   }
+	   else
+	   {if(((d>13)&&(m==4))||((d<=18)&&(m==3)))
+	    {cout<<"***ALISO***"<<endl;
+	     cout<<"Es de naturaleza espontánea, entusiasta y nerviosa, y más tierno de lo que aparenta."<<endl; 
+		 cout<<"Es una persona optimista, simpática , muy admirada y querida"<<endl; 
+         cout<<"Su ironía lo lleva a cometer demasiados errores, aunque en el amor, es una persona cálida y apasionada, y no se derrumba por nada."<<endl;    
+         cout<<"Si una relación no funciona, a otra cosa mariposa."<<endl;
+	    }
+	    else
+		{if(((d>11)&&(m==5))||((d<=15)&&(m==6)))
+	     {cout<<"***SAUCE***"<<endl; 
+		  cout<<"Es una persona inteligente y tenaz con una capacidad para dar consejos."<<endl; 
+		  cout<<"Vive la vida intensamente y es capaz de adaptarse a cualquier situación. La base fundamental para su bienestar es el amor, con lo que logra el equilibrio."<<endl;
+          cout<<"Es posesivo con los seres que ama, le gusta la intimidad, la exaltación del cuerpo, las revelaciones y los lugares distinguidos."<<endl; 
+          cout<<"Sus mayores defectos son no saber perdonar, no olvidar y no poder mantener su palabra."<<endl;
+	      }
+		 else
+		 {if(((d>8)&&(m==6))||((d<=13)&&(m==5)))
+	      {cout<<"***ESPINO***"<<endl;
+	       cout<<"Es un extraordinario amigo, que confía mucho en sí mismo y con clara voluntad de líder."<<endl; 
+		  cout<<"Romántico y rebelde, tiene un espíritu independiente y sin convencionalismos,"<<endl; 
+		  cout<<"sin ningún temor ni amargura mira siempre hacia el futuro y son las ilusiones lo que lo mantienen siempre vivo."<<endl; 
+          cout<<"No encuentra el equilibrio, pues está busca la estabilidad afectiva pero a le gustan las relaciones libres. Vive idealizando y buscando el amor absoluto."<<endl;
+	      }
+		 else
+		 {if(((d>9)&&(m==6))||((d<=27)&&(m==7)))
+	      {cout<<"***ROBLE***"<<endl;
+		   cout<<"Gran amigo, es generoso, íntegro y con gran magnetismo. Le encanta sentirse rodeado de gente interesante que lo quieran y lo incentiven."<<endl;
+           cout<<"En sus relaciones amorosas busca la reciprocidad y si no se siente querido se siente muy mal."<<endl; 
+		   cout<<"Cuando encuentra la pareja acorde, disfruta plenamente del sexo,"<<endl; 
+		   cout<<"porque aunque esconde su sexualidad debajo de una capa de ternura y delicadeza, en su interior es sumamente erótico."<<endl; 
+           cout<<"Sus defectos, la vanidad, la falta de tacto y la irresponsabilidad."<<endl;
+	      }
+		  else
+		  {if(((d>27)&&(m==7))||((d<=30)&&(m==8)))
+	       {cout<<"***AVELLANO***"<<endl; 
+		   cout<<"Son personas con una agudeza intelectual, que adoran la justicia y el saber."<<endl; 
+		   cout<<"Amigos excepcionales, tienen un carácter solidario."<<endl;
+           cout<<"El amor es el real motor de su vida y transmite su pasión por ese camino."<<endl; 
+	       cout<<"Solo se enamora de las personas por las que siente admiración y aunque resulta un ser muy fiel, suele ser posesivo."<<endl;
+	       }
+		  else
+		  {if(((d>28)&&(m==9))&&((d<=31)&&(m==8)))
+	       {cout<<"***PARRA***"<<endl;
+		   cout<<"Es una persona bondadosa y de gran atractivo."<<endl;
+		   cout<<"Es metódico, muy organizado, amante del orden, minucioso y muy conservador."<<endl; 
+           cout<<"Ante el miedo de sufrir, aparenta timidez y frialdad."<<endl;
+           cout<<"Suele separar la amistad y el amor, para comprobar su autenticidad."<<endl;
+		   cout<<"Entre sus defectos destaca el culpar a los demás de sus propios errores, es indulgente consigo mismo, y tiende a depender de los demás."<<endl;
+	       }
+		  else
+		  {if(((d>26)&&(m==10))||((d<=30)&&(m==9)))
+	       {cout<<"***HIEDRA***"<<endl;
+		    cout<<"Es generoso, ahorrativo, posee una gran inteligencia, es fiel a sus amigos."<<endl;
+		    cout<<"Posee un enorme optimismo y siempre está de buen humor. Se siente feliz con las cosas más sencillas."<<endl;
+            cout<<"Sin embargo, en el amor es cambiante y caprichoso, pero cuando ama lo hace con el corazón."<<endl; 
+			cout<<"Tiene necesidad de excitación, de variedad y de sorpresa en el medio erótico. Le gustan los juegos de seducción."<<endl; 
+            cout<<"Su mayor defecto es tener su propia pauta de conducta que hace que imponga sus ideas y maneje a los otros para conseguir lo que desea."<<endl; 
+	       }
+		   else
+		   {if(((d>23)&&(m==11))||((d<=28)&&(m==10)))
+	        {cout<<"***CAÑA***"<<endl;
+			cout<<"Es apasionado, misteriosa, rebelde, intolerante y tiende al extremismo."<<endl;
+             cout<<"En el amor es absolutista, lo que le complica su vida amorosa y afectiva. Es instintivo y "<<endl;
+	         cout<<"provocador y posee una enorme necesidad de ser admirado. Suele también dramatizar en demasía los conflictos."<<endl;
+	        }
+		    else
+			{if(((d>22)&&(m==12))||((d<=25)&&(m==11)))
+	         {cout<<"***SAUCO***"<<endl;
+			 cout<<"Es optimista, paciente, no se da por vencido fácilmente y tiene la capacidad de aprender de sus errores."<<endl; 
+			 cout<<"Le gusta vivir en armonía, y es de naturaleza paciente y perseverante."<<endl; 
+             cout<<"En el amor tiene un enfoque muy anticuado, donde la moral y"<<endl;
+             cout<<"las reglas sociales son lo principal, por lo que suele controlar sus impulsos hasta lograr inhibirlos. Su defecto es la obsesión por ganar, su insensibilidad, su ambición."<<endl;break;
+	         }
+	        }
+	       }
+	      }
+	     }
+	    }
+	   }
+	  }
+	 }
+	}
+   }
+  }
+
+ 
+ case 0: bandera=1; break;
+ default:
+	 cout<<"opcion invalida"<<endl;
+	 }
+}
+getch ();
+}
+
+Enter file contents here
